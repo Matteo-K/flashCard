@@ -1,0 +1,39 @@
+1;Compte de capitaux
+2;Compte d'immobilisation
+3;Compte de stocks
+4;Compte de tiers
+5;Compte de tresorie
+6;Compte de charges
+7;Compte de produits
+101;Capital individuel
+109;Perte
+120;Profit
+13;Subvention
+144;Emprunt
+203;Recherche et developpement
+211;Terrains
+213;Constructions
+215;Naturel
+2182;Vehicule
+2183;Materiel informatique et bureau
+31;Stock de matiere premiere
+35;Stock de produit finis
+37;Stock de marchandise
+401;Fournisseur debiteurs
+4091/4191;Avances versees aux fournisseurs
+4096/4196;Creances pour emballages et materiel consignes
+411;Client
+421;Personnel
+43;Organisme sociaux
+4456;TVA reductive
+4457;TVA collecte
+512;Banque
+53;Caisse
+601;Achat de matiere premiere
+607;Achat de marchandise
+609/709;Reduction commerciale
+624/7085;Transports de biens et transports collectifs du personnel
+665/765;Escomptes accordes
+701;Vente de produit finis
+706;Vente de service
+707;Vente de marchandise
