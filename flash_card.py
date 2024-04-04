@@ -1,5 +1,19 @@
-import re,os
+import re, os, unicodedata
 from random import randint
+
+import unicodedata
+
+def normalize(s: str) -> str:
+    """
+    Normalize a string by removing diacritic marks and converting it to lowercase ASCII.
+
+    Args:
+        s (str): The string to normalize.
+
+    Returns:
+        str: The normalized string.
+    """
+    return unicodedata.normalize("NFKD", s).encode("ASCII", "ignore").decode().casefold()
 
 def openFile(nameFile: str) -> dict:
     res = {}
@@ -28,9 +42,10 @@ def check(test: str, result: str) -> bool:
     Vérifie si l'entre de l'utilisateur 
     correspond à la réponse de la carte
     """
-    test_normalized = test.replace('é', 'e').replace('è', 'e').replace('ê', 'e').replace('à', 'a').replace('ç', 'c').replace('ô', 'o')
-    result_normalized = result.replace('é', 'e').replace('è', 'e').replace('ê', 'e').replace('à', 'a').replace('ç', 'c').replace('ô', 'o')
-    r = re.split(r'(.*)\/+',result_normalized)
+    test_normalized = normalize(test)
+    result_normalized = normalize(result)
+
+    r = re.split(r'(.*)\/+', result_normalized)
     check = False
     for res in r:
         if test_normalized == res:
