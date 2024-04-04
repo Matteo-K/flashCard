@@ -139,4 +139,5 @@ def main():
         elif choice == "3":
             card(array)
 
-main()
+if __name__ == '__main__':
+    main()
